@@ -5,31 +5,47 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: CN |72.86Mb, server: 120.232.173.119, port: 20004, type: trojan, password: e511e8c9-fa7a-3441-82ad-5219e9d47213, skip-cert-verify: true, udp: true}
-  - {name: CN |51.50Mb, server: 116.129.253.128, port: 20001, type: trojan, password: e511e8c9-fa7a-3441-82ad-5219e9d47213, skip-cert-verify: true, udp: true}
+  - {name: US_135 |31.29Mb, server: shop-three.defun.us, port: 443, type: trojan, password: UvhTLyCf27fjxqPQ, sni: shop-three.defun.us, skip-cert-verify: true, udp: true}
+  - {name: Relay_🇨🇳CN-🇸🇪SE_48 |10.70Mb, server: cn1.relay.iepl.pw, port: 50500, type: ss, cipher: aes-128-gcm, password: 6a2fb1df-9a79-4640-ab04-5335a8e32cc7, udp: true}
+  - {name: Relay_🇨🇳CN-🇮🇸IS_43 |10.73Mb, server: cn1.relay.iepl.pw, port: 50600, type: ss, cipher: aes-128-gcm, password: 6a2fb1df-9a79-4640-ab04-5335a8e32cc7, udp: true}
+  - {name: US_1316 |184.93Mb, server: 192.18.138.167, port: 25250, type: vmess, uuid: 0a4164a6-9485-4ba5-f233-a936f8a1d023, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: Relay_🇨🇳CN-🇷🇺RU_57 |19.50Mb, server: cn1.relay.iepl.pw, port: 50700, type: ss, cipher: aes-128-gcm, password: 6a2fb1df-9a79-4640-ab04-5335a8e32cc7, udp: true}
+  - {name: Relay_🇨🇳CN-🇯🇵JP_49 |25.91Mb, server: cn1.relay.iepl.pw, port: 50300, type: ss, cipher: aes-128-gcm, password: 6a2fb1df-9a79-4640-ab04-5335a8e32cc7, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - CN |72.86Mb
-      - CN |51.50Mb
+      - US_135 |31.29Mb
+      - Relay_🇨🇳CN-🇸🇪SE_48 |10.70Mb
+      - Relay_🇨🇳CN-🇮🇸IS_43 |10.73Mb
+      - US_1316 |184.93Mb
+      - Relay_🇨🇳CN-🇷🇺RU_57 |19.50Mb
+      - Relay_🇨🇳CN-🇯🇵JP_49 |25.91Mb
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - CN |72.86Mb
-      - CN |51.50Mb
+      - US_135 |31.29Mb
+      - Relay_🇨🇳CN-🇸🇪SE_48 |10.70Mb
+      - Relay_🇨🇳CN-🇮🇸IS_43 |10.73Mb
+      - US_1316 |184.93Mb
+      - Relay_🇨🇳CN-🇷🇺RU_57 |19.50Mb
+      - Relay_🇨🇳CN-🇯🇵JP_49 |25.91Mb
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - CN |72.86Mb
-      - CN |51.50Mb
+      - US_135 |31.29Mb
+      - Relay_🇨🇳CN-🇸🇪SE_48 |10.70Mb
+      - Relay_🇨🇳CN-🇮🇸IS_43 |10.73Mb
+      - US_1316 |184.93Mb
+      - Relay_🇨🇳CN-🇷🇺RU_57 |19.50Mb
+      - Relay_🇨🇳CN-🇯🇵JP_49 |25.91Mb
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -48,8 +64,12 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - CN |72.86Mb
-      - CN |51.50Mb
+      - US_135 |31.29Mb
+      - Relay_🇨🇳CN-🇸🇪SE_48 |10.70Mb
+      - Relay_🇨🇳CN-🇮🇸IS_43 |10.73Mb
+      - US_1316 |184.93Mb
+      - Relay_🇨🇳CN-🇷🇺RU_57 |19.50Mb
+      - Relay_🇨🇳CN-🇯🇵JP_49 |25.91Mb
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -60,23 +80,35 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - CN |72.86Mb
-      - CN |51.50Mb
+      - US_135 |31.29Mb
+      - Relay_🇨🇳CN-🇸🇪SE_48 |10.70Mb
+      - Relay_🇨🇳CN-🇮🇸IS_43 |10.73Mb
+      - US_1316 |184.93Mb
+      - Relay_🇨🇳CN-🇷🇺RU_57 |19.50Mb
+      - Relay_🇨🇳CN-🇯🇵JP_49 |25.91Mb
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - CN |72.86Mb
-      - CN |51.50Mb
+      - US_135 |31.29Mb
+      - Relay_🇨🇳CN-🇸🇪SE_48 |10.70Mb
+      - Relay_🇨🇳CN-🇮🇸IS_43 |10.73Mb
+      - US_1316 |184.93Mb
+      - Relay_🇨🇳CN-🇷🇺RU_57 |19.50Mb
+      - Relay_🇨🇳CN-🇯🇵JP_49 |25.91Mb
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - CN |72.86Mb
-      - CN |51.50Mb
+      - US_135 |31.29Mb
+      - Relay_🇨🇳CN-🇸🇪SE_48 |10.70Mb
+      - Relay_🇨🇳CN-🇮🇸IS_43 |10.73Mb
+      - US_1316 |184.93Mb
+      - Relay_🇨🇳CN-🇷🇺RU_57 |19.50Mb
+      - Relay_🇨🇳CN-🇯🇵JP_49 |25.91Mb
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -92,8 +124,12 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - CN |72.86Mb
-      - CN |51.50Mb
+      - US_135 |31.29Mb
+      - Relay_🇨🇳CN-🇸🇪SE_48 |10.70Mb
+      - Relay_🇨🇳CN-🇮🇸IS_43 |10.73Mb
+      - US_1316 |184.93Mb
+      - Relay_🇨🇳CN-🇷🇺RU_57 |19.50Mb
+      - Relay_🇨🇳CN-🇯🇵JP_49 |25.91Mb
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
